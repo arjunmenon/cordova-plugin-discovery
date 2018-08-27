@@ -102,7 +102,7 @@ public class cordovaSSDP extends CordovaPlugin {
         MulticastSocket multicast = null;
         try {
             multicast = new MulticastSocket(null);
-            //multicast.setReuseAddress(true);
+            multicast.setReuseAddress(true);
             multicast.bind(srcAddress);
             multicast.setTimeToLive(4);
             multicast.send(discoveryPacket);
