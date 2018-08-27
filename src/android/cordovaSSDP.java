@@ -116,7 +116,7 @@ public class cordovaSSDP extends CordovaPlugin {
         DatagramPacket receivePacket;
         try {
             //wildSocket = new DatagramSocket(SSDP_SEARCH_PORT);
-            wildSocket = new DatagramSocket();
+            wildSocket = new DatagramSocket(null);            
             wildSocket.setSoTimeout(TIMEOUT);
 
             while (true) {
